@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class CharacterManager : MonoBehaviour
 {
-    [SerializeField]
     private GameObject m_mainCharacter;
+
+    [SerializeField]
+    private GameObject m_mainCharacterPrefab;
 
     [SerializeField]
     private Material m_mainCharacterClothMaterial, m_mainCharacterSkinMaterial;
@@ -29,7 +32,12 @@ public class CharacterManager : MonoBehaviour
     {
         if (m_animator == null)
         {
-            m_animator = m_mainCharacter.GetComponent<Animator>();
+            if (m_mainCharacter == null)
+            {
+                m_mainCharacter = GameObject.FindGameObjectWithTag("Player");
+            }
+
+            m_animator = m_mainCharacter.GetComponentInChildren<Animator>();
         }
 
         m_animator.SetTrigger(animName);
@@ -47,5 +55,20 @@ public class CharacterManager : MonoBehaviour
         // Change main character skin & cloth color
         m_mainCharacterClothMaterial.color = m_clothColorPicker.color;
         m_mainCharacterSkinMaterial.color = m_skinColorPicker.color;
+
+        // Check if the main character is null and instantiate it if it is
+        if (m_mainCharacter == null)
+        {
+            m_mainCharacter = GameObject.FindGameObjectWithTag("Player");
+
+            if (m_mainCharacter == null)
+            {
+                m_mainCharacter = Instantiate(m_mainCharacterPrefab) as GameObject;
+                m_mainCharacter.transform.position = Camera.main.transform.forward * 2 + new Vector3(0, -0.6f, 0);
+                m_mainCharacter.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.eulerAngles + new Vector3(0, 180, 0));
+                m_mainCharacter.transform.localScale = new Vector3(2f, 2f, 2f);
+                m_mainCharacter.AddComponent<ARAnchor>();
+            }
+        }
     }
 }

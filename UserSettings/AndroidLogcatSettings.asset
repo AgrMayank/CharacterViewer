@@ -10,20 +10,38 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "192.168.29.148:34471",
-            "name": "com.android.settings",
-            "processId": 16565,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.29.148:34471",
-            "name": "com.AgrMayank.CharacterViewer",
-            "processId": 15148,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.29.148:34471",
             "name": "com.AgrMayank.CharacterViewer",
             "processId": 25667,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 30491,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 6539,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 16305,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.sec.android.app.launcher",
+            "processId": 10186,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 24859,
             "exited": true
         }
     ],

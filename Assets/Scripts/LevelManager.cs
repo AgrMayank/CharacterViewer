@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 90;
         if (CrossfadeAnim == null)
         {
             CrossfadeAnim = new GameObject("Crossfade Anim");
