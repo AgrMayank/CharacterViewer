@@ -11,6 +11,9 @@ public class CharacterManager : MonoBehaviour
     private Material m_mainCharacterClothMaterial, m_mainCharacterSkinMaterial;
 
     [SerializeField]
+    public FlexibleColorPicker m_clothColorPicker, m_skinColorPicker;
+
+    [SerializeField]
     private Material[] m_skyboxMaterials;
     private int m_currentSkyboxIndex = 0;
 
@@ -37,5 +40,12 @@ public class CharacterManager : MonoBehaviour
     {
         m_currentSkyboxIndex = (m_currentSkyboxIndex + 1) % m_skyboxMaterials.Length;
         RenderSettings.skybox = m_skyboxMaterials[m_currentSkyboxIndex];
+    }
+
+    private void Update()
+    {
+        // Change main character skin & cloth color
+        m_mainCharacterClothMaterial.color = m_clothColorPicker.color;
+        m_mainCharacterSkinMaterial.color = m_skinColorPicker.color;
     }
 }
