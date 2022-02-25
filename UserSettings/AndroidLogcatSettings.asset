@@ -3,17 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "192.168.29.148:34471",
         "name": "com.AgrMayank.CharacterViewer",
-        "processId": 25528,
+        "processId": 9685,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "192.168.29.148:34471",
-            "name": "com.AgrMayank.CharacterViewer",
-            "processId": 25667,
-            "exited": true
-        },
         {
             "deviceId": "192.168.29.148:34471",
             "name": "com.AgrMayank.CharacterViewer",
@@ -48,6 +42,18 @@
             "deviceId": "192.168.29.148:34471",
             "name": "com.AgrMayank.CharacterViewer",
             "processId": 25528,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 32506,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 9685,
             "exited": false
         }
     ],

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using System;
+#if UNITY_ANDROID || UNITY_IOS
+using NativeGalleryNamespace;
+#endif
 
 public class CharacterManager : MonoBehaviour
 {
@@ -19,6 +23,9 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     private Material[] m_skyboxMaterials;
     private int m_currentSkyboxIndex = 0;
+
+    [SerializeField]
+    private GameObject[] m_disableForScreenshot, m_enableForScreenshot;
 
     private Animator m_animator;
 
@@ -48,6 +55,38 @@ public class CharacterManager : MonoBehaviour
     {
         m_currentSkyboxIndex = (m_currentSkyboxIndex + 1) % m_skyboxMaterials.Length;
         RenderSettings.skybox = m_skyboxMaterials[m_currentSkyboxIndex];
+    }
+
+    public void CaptureScreenshot()
+    {
+        StartCoroutine(CaptureScreenshotCoroutine());
+    }
+
+    IEnumerator CaptureScreenshotCoroutine()
+    {
+        foreach (GameObject go in m_disableForScreenshot)
+        {
+            go.SetActive(false);
+        }
+        foreach (GameObject go in m_enableForScreenshot)
+        {
+            go.SetActive(true);
+        }
+
+        yield return new WaitForEndOfFrame();
+
+        var screenshot = ScreenCapture.CaptureScreenshotAsTexture();
+
+        NativeGallery.SaveImageToGallery(screenshot, "Characters", "Mr. Happy Face" + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".png");
+
+        foreach (GameObject go in m_disableForScreenshot)
+        {
+            go.SetActive(true);
+        }
+        foreach (GameObject go in m_enableForScreenshot)
+        {
+            go.SetActive(false);
+        }
     }
 
     private void Update()
