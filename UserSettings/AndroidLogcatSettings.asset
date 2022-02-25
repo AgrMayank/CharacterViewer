@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "192.168.29.148:34471",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -7,7 +7,20 @@
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.android.settings",
+            "processId": 16565,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 15148,
+            "exited": true
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -16,7 +29,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -32,7 +45,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
@@ -41,9 +54,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
