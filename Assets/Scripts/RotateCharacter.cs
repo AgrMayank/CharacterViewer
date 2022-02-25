@@ -11,9 +11,11 @@ public class RotateCharacter : MonoBehaviour
     public float rotateSpeedX = 0.1f;
     public float rotateSpeedY = 0.1f;
 
+    private bool isOverGameObject = false;
+
     void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && isOverGameObject)
         {
             touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Moved)
@@ -22,5 +24,17 @@ public class RotateCharacter : MonoBehaviour
                 transform.rotation = rotXY * transform.rotation;
             }
         }
+    }
+
+    void OnMouseDown()
+    {
+        Debug.Log("OnMouseDown");
+        isOverGameObject = true;
+    }
+
+    void OnMouseUp()
+    {
+        Debug.Log("OnMouseUp");
+        isOverGameObject = false;
     }
 }
