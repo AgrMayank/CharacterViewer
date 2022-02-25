@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "192.168.29.148:34471",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "192.168.29.148:34471",
+        "name": "com.AgrMayank.CharacterViewer",
+        "processId": 25528,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,12 @@
             "name": "com.AgrMayank.CharacterViewer",
             "processId": 24859,
             "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 25528,
+            "exited": false
         }
     ],
     "m_Tags": {
