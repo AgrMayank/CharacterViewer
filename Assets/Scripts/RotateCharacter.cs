@@ -28,13 +28,11 @@ public class RotateCharacter : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("OnMouseDown");
         isOverGameObject = true;
     }
 
     void OnMouseUp()
     {
-        Debug.Log("OnMouseUp");
         isOverGameObject = false;
     }
 }

@@ -19,6 +19,12 @@
             "name": "com.AgrMayank.CharacterViewer",
             "processId": 15148,
             "exited": true
+        },
+        {
+            "deviceId": "192.168.29.148:34471",
+            "name": "com.AgrMayank.CharacterViewer",
+            "processId": 25667,
+            "exited": true
         }
     ],
     "m_Tags": {
